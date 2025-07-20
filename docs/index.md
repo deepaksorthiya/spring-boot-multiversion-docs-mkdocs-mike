@@ -1,6 +1,6 @@
 # Welcome to MkDocs
 
-I am version 1.0.0
+I am version 2.0.0
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 ## Commands
