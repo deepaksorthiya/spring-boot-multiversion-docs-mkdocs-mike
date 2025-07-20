@@ -1,0 +1,30 @@
+# Project information
+site_name: Spring Boot Multi Version Docs
+site_url: https://deepaksorthiya.github.io/spring-boot-multiversion-docs-mkdocs-mike/
+site_author: Deepak
+
+repo_name: deepaksorthiya/spring-boot-multiversion-docs-mkdocs-mike
+repo_url: https://github.com/deepaksorthiya/spring-boot-multiversion-docs-mkdocs-mike
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: green
+      accent: deep purple
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: deep orange
+extra:
+  version:
+    provider: mike

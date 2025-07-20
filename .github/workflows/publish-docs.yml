@@ -1,0 +1,44 @@
+name: Publish a Docker image to Github and DockerHub
+
+on:
+  release:
+    types: [ published ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      packages: write
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - run: git fetch --prune --unshallow --tags
+      - name: Setup Python 3
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      # test python by printing the current Python version
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs-material mike
+
+      - name: Configure Git for gh-pages
+        run: |
+          git config --global user.name "Docs Bot"
+          git config --global user.email "docs@dummy.bot.com"
+
+      - name: Set release version
+        run: echo "GIT_TAG=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
+
+      - name: Build and deploy documentation
+        run: |
+          ls -la
+          mike deploy --push --update-aliases ${GIT_TAG} latest
