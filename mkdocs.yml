@@ -2,6 +2,7 @@
 site_name: Spring Boot Multi Version Docs
 site_url: https://deepaksorthiya.github.io/spring-boot-multiversion-docs-mkdocs-mike/
 site_author: Deepak
+edit_uri: edit/main/docs/
 
 repo_name: deepaksorthiya/spring-boot-multiversion-docs-mkdocs-mike
 repo_url: https://github.com/deepaksorthiya/spring-boot-multiversion-docs-mkdocs-mike
@@ -10,21 +11,79 @@ theme:
   name: material
   custom_dir: overrides
   palette:
-    # Dark Mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Dark mode
-      primary: green
-      accent: deep purple
-
-    # Light Mode
-    - scheme: default
-      toggle:
-        icon: material/weather-night
-        name: Light mode
-      primary: blue
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: brown
       accent: deep orange
+      toggle:
+        icon: material/lightbulb-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: orange
+      toggle:
+        icon: material/lightbulb-on
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - content.code.copy
+nav:
+  - 'index.md'
+  - 'Tutorials':
+      - 'tutorials/tutorials.md'
+  - 'Guides':
+      - 'guides/guides.md'
+  - 'References':
+      - 'references/references.md'
+      - 'Tags index': 'tags-index.md'
+  - 'API': 'https://javadoc.io/doc/io.smallrye.reactive/mutiny/latest/index.html'
+  - 'Discussions/Questions': 'https://github.com/smallrye/smallrye-mutiny/discussions'
+
+markdown_extensions:
+  - toc:
+      permalink: '#'
+  - admonition
+  - smarty
+  - attr_list
+  - md_in_html
+  - meta
+  - tables
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.snippets
+  - pymdownx.inlinehilite
+  - pymdownx.details
+  - pymdownx.smartsymbols
+  - pymdownx.betterem
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - tags:
+      tags_file: tags-index.md
+  - search
+  - macros:
+        verbose: true
+        module_name: macros/docissimo
+        include_dir: macros
 extra:
+  snippet_dir: src/main
+  attributes_path: attributes.yaml
   version:
     provider: mike

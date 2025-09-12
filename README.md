@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/docker/pulls/deepaksorthiya/spring-boot-multiversion-docs-mkdocs-mike" alt="Docker"/>
   </a>
   <a href="https://spring.io/projects/spring-boot">
-    <img src="https://img.shields.io/badge/spring--boot-3.5.0-brightgreen?logo=springboot" alt="Spring Boot"/>
+    <img src="https://img.shields.io/badge/spring--boot-3.5.5-brightgreen?logo=springboot" alt="Spring Boot"/>
   </a>
 </p>
 
@@ -46,7 +46,7 @@ Spring Boot Multi Version Documentation Using Mkdocs material
 
 ## 🚀 Features
 
-- Spring Boot 3.5.0 (Java 24)
+- Spring Boot 3.5.5 (Java 24)
 - RESTful API with CRUD endpoints
 - Spring Data JPA (H2 in-memory DB)
 - Actuator endpoints enabled
@@ -62,7 +62,7 @@ Spring Boot Multi Version Documentation Using Mkdocs material
 - Git `2.50.0+`
 - Java `24`
 - Maven `3.9+`
-- Spring Boot `3.5.0`
+- Spring Boot `3.5.5`
 - (Optional)Docker Desktop (tested on `4.42.0`)
 - (Optional) Minikube/Helm for Kubernetes
 

@@ -1,13 +1,12 @@
 ---
-hide:
-- navigation
-- toc
-title: Home
+tags:
+  - reference
+  - intermediate
 ---
 
-# Welcome to MkDocs
+# Welcome to Reference Page
 
-I am version 2.0.0
+I am version 2.0.0 References page
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 ## Commands
