@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://deepaksorthiya.github.io/spring-boot-multiversion-docs-mkdocs-mike/3.0.0/</loc>
+         <lastmod>2025-09-12</lastmod>
+    </url>
+    <url>
+         <loc>https://deepaksorthiya.github.io/spring-boot-multiversion-docs-mkdocs-mike/3.0.0/tags-index/</loc>
+         <lastmod>2025-09-12</lastmod>
+    </url>
+    <url>
+         <loc>https://deepaksorthiya.github.io/spring-boot-multiversion-docs-mkdocs-mike/3.0.0/guides/guides/</loc>
+         <lastmod>2025-09-12</lastmod>
+    </url>
+    <url>
+         <loc>https://deepaksorthiya.github.io/spring-boot-multiversion-docs-mkdocs-mike/3.0.0/references/references/</loc>
+         <lastmod>2025-09-12</lastmod>
+    </url>
+    <url>
+         <loc>https://deepaksorthiya.github.io/spring-boot-multiversion-docs-mkdocs-mike/3.0.0/tutorials/tutorials/</loc>
+         <lastmod>2025-09-12</lastmod>
+    </url>
+</urlset>
