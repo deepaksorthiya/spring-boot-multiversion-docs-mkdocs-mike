@@ -6,7 +6,7 @@ tags:
 
 # Welcome to Tutorials Page
 
-I am version 2.0.0 Tutorials page
+I am version 3.0.0 Tutorials page
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 ## Commands
